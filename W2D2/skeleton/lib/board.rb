@@ -6,7 +6,6 @@ class Board
     @name1, @name2 = name1, name2
     @cups = Array.new(14) {[]}
     @opp_store = { name1 => 13, name2 => 6}
-    @own_store = { name1 => 6, name2 => 13}
     place_stones
   end
 
@@ -37,13 +36,12 @@ class Board
       current_pos += 1
     end
     self.render
-    next_turn(current_pos - 1, current_player_name)
-      #make_move(next_cup, current_player_name)
+    next_turn(current_pos - 1)
   end
 
-  def next_turn(ending_cup_idx, current_player_name)
+  def next_turn(ending_cup_idx)
     # helper method to determine what #make_move returns
-    if ending_cup_idx == @own_store[current_player_name]
+    if ending_cup_idx == 6 || ending_cup_idx == 13
       return :prompt
     elsif @cups[ending_cup_idx].length == 1
       return :switch
