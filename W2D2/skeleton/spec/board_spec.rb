@@ -107,7 +107,7 @@ describe Board do
 
   describe "#cups_empty?" do
     it "returns true if all of the non-point cups are empty" do
-      [0..5].each { |idx| board.cups[idx] = [] }
+      (0..5).each { |idx| board.cups[idx] = [] }
       expect(board.cups_empty?).to be(true)
     end
 
