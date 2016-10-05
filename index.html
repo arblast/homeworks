@@ -1,9 +1,19 @@
 <html>
     <head>
-    	<meta name="description" content="Best braised chicken recipe">
+    	<meta name="description" content="Best, easy, simple braised chicken recipe">
     	<meta name="keywords" content="braised, chicken, recipe">
     	<meta name="author" content="Justice Yen">
     	<meta charset="UTF-8">
+    	<link rel="stylesheet" href="css_reset.css" type="text/css">
+    	<script type="text/javascript" src="external_javascript_example.js"/script>
+		  <script>
+		      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-12345678-9', 'auto');
+		      ga('send', 'pageview');
+		  </script>
    	  <title>Justice Yen's Braised Chicken</title>
     </head>
     <header>
@@ -63,8 +73,9 @@
 					<li>Remove chicken into plate and pour sauce over.</li>
 				</ol>		
 		    </section>
-		    <section>
-		    	<form action="/reviews" method="post">
+		    <section id="reviews">
+		    	<h2>Reviews</h2>
+		    	<form action="/reviews" method="post" id="review-form">
 		    		<label for="name">Name</label>
 		    		<input type="text" name="name", id="name">
 		    		<label>Rating</label>
