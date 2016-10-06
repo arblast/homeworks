@@ -1,0 +1,17 @@
+<h1>Cats upon cats!</h1>
+
+<ul>
+  <% @cats.each do |cat| %>
+    <li><%= link_to cat.name, cat_url(cat) %></li>
+  <% end %>
+</ul>
+
+<ul>
+  <% if flash[:messages] %>
+    <% flash[:messages].each do |error_msg| %>
+    <li><%= error_msg %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to "Create cat", new_cat_url %>
