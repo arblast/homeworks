@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: bisque;
+    width: 80%;
+    margin: 0 auto;
 }
 h1 {
     font-size: 38px;
@@ -18,8 +20,10 @@ h2 {
     list-style: decimal inside;
 }
 
-header img {
+header > img {
     width: 100px;
+    height: 100px;
+    float: left;
 }
 
 li a {
@@ -35,3 +39,135 @@ li a {
     font-size: 18;
     font-style: normal;
 }
+
+input[type="radio"], select, input[type="submit"] {
+  cursor:pointer;
+  outline:none;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    width: 27px;
+    height: 27px;
+    background-image: url(./stars.png);
+    vertical-align: bottom;
+}
+
+input[type="radio"]:checked {
+    background-position: 30px 60px;
+}
+
+input:last-child {
+  background-color: gold;
+}
+
+input:last-child:hover {
+  -webkit-filter: brightness(90%);
+}
+
+ol li:nth-of-type(2n) {
+  background-color: Beige;
+}
+
+h2 + .user_review {
+    border-top: 1px solid black
+}
+
+nav li {
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul {
+    display: inline;
+}
+
+nav {
+    float: right;
+}
+
+/*body aside {*/
+/*    width: 180px;*/
+/*    display: inline-block;*/
+/*    vertical-align: top;*/
+/*    margin-right: 15px;*/
+/*}*/
+
+/*body section {*/
+/*    width: 700px;*/
+/*    display: inline-block;*/
+/*}*/
+
+.ingredients-list li, .direction-list li {
+    margin-top: 15px;
+    margin-bottom: 15px
+}
+
+input[type="text"] {
+    display: block;
+}
+
+select {
+    margin: 15px 0px;
+    display: block;
+}
+
+textarea {
+    margin: 15px 0px;
+    display: block;
+    width: 300px;
+}
+
+.cf:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section p {
+    margin: 15px 0px;
+}
+
+.hamburger-dropdown {
+    display: none;
+    float: right;
+    position: relative;
+    background-image: url("./hamburger.png");
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+    cursor: pointer;
+}
+
+.hamburger-dropdown li ul {
+    display: none;
+    position: absolute;
+    box-shadow: black 5px 5px 10px;
+    top: 50px;
+    flex-direction: column;
+}
+
+.hamburger-dropdown li ul li{
+    margin: 15px;
+}
+
+.hamburger-dropdown li ul li:hover {
+    text-decoration: underline;
+}
+
+.hamburger-dropdown:hover ul { 
+    display: flex;
+    background: ghostwhite;
+ }
+ 
+ @media all and (max-width: 700px) {
+  nav {
+    display: none;
+  }
+  
+  .hamburger-dropdown {
+      display: block;
+  }
+}
+
+

@@ -1,4 +1,4 @@
-nav, h2, ul, p, ol {
+html, body, nav, h2, ul, p, ol {
 
   margin: 0;
   border: 0;
@@ -7,23 +7,12 @@ nav, h2, ul, p, ol {
   text-align: inherit;
   text-decoration: inherit;
   color: inherit;
-
+  list-style: none;
   background: transparent;
 }
 
-input[type="radio"], select, input[type="submit"] {
-  cursor:pointer;
-  outline:none;
+img {
+  width: 100%;
 }
 
-input:last-child {
-  background-color: gold;
-}
 
-input:last-child:hover {
-  -webkit-filter: brightness(90%);
-}
-
-ol li:nth-of-type(2n) {
-  background-color: grey;
-}
