@@ -1,0 +1,30 @@
+<html>
+  <h2>Register</h2>
+    <form action="<%= users_url %>" method="POST" >
+
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <label>Username:
+        <input type="text" name="user[user_name]">
+      </label>
+
+      &nbsp &nbsp
+
+      <label>Password:
+        <input type="text" name="user[password]">
+      </label>
+
+      <input type = "submit" value = "Register!">
+    </form>
+
+    <ul>
+      <% if flash[:errors] %>
+        <% flash[:errors].each do |error_msg| %>
+        <li><%= error_msg %></li>
+        <% end %>
+      <% end %>
+    </ul>
+    <% content_for :footer do %>
+      <p>This is the user registration page.</p>
+    <% end %>
+</html>
