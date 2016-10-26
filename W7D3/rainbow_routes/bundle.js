@@ -150,22 +150,22 @@
 	  }, {
 	    key: 'addRed',
 	    value: function addRed() {
-	      // your code here
+	      this.props.router.push('/red');
 	    }
 	  }, {
 	    key: 'addGreen',
 	    value: function addGreen() {
-	      // your code here
+	      this.props.router.push('/green');
 	    }
 	  }, {
 	    key: 'addBlue',
 	    value: function addBlue() {
-	      // your code here
+	      this.props.router.push('/blue');
 	    }
 	  }, {
 	    key: 'addViolet',
 	    value: function addViolet() {
-	      // your code here
+	      this.props.router.push('/violet');
 	    }
 	  }]);
 	
@@ -179,7 +179,19 @@
 	var routes = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { path: '/', component: Rainbow },
-	  '// your routes here'
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: 'red', component: _red2.default },
+	    _react2.default.createElement(_reactRouter.Route, { path: 'orange', component: _orange2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'yellow', component: _yellow2.default })
+	  ),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'green', component: _green2.default }),
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: 'blue', component: _blue2.default },
+	    _react2.default.createElement(_reactRouter.Route, { path: 'indigo', component: _indigo2.default })
+	  ),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'violet', component: _violet2.default })
 	);
 	
 	document.addEventListener("DOMContentLoaded", function () {
@@ -25604,17 +25616,17 @@
 	  }, {
 	    key: 'resetRed',
 	    value: function resetRed() {
-	      // your code here
+	      this.props.router.push('/red');
 	    }
 	  }, {
 	    key: 'addOrange',
 	    value: function addOrange() {
-	      // your code here
+	      this.props.router.push('/red/orange');
 	    }
 	  }, {
 	    key: 'addYellow',
 	    value: function addYellow() {
-	      // your code here
+	      this.props.router.push('/red/yellow');
 	    }
 	  }]);
 	
@@ -25765,12 +25777,12 @@
 	  }, {
 	    key: 'resetBlue',
 	    value: function resetBlue() {
-	      // your code here
+	      this.props.router.push('/blue');
 	    }
 	  }, {
 	    key: 'addIndigo',
 	    value: function addIndigo() {
-	      // your code here
+	      this.props.router.push('/blue/indigo');
 	    }
 	  }]);
 	
